@@ -3,4 +3,7 @@ Agenda V0.1
 
 Agenda realizada em python
 
-RA: 1701431 Petterson Possidonio Função D
+Integrantes do grupo
+
+* Fabrício da Silva Werneck - RA1800357
+* Petterson Possidonio - RA1701431

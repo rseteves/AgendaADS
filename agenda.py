@@ -10,14 +10,14 @@ print("Seleccionaste", opcao)
 
 
 while opcao != 9:
-
 	# Estrutura de controle
+	if opcao == 9:
+		agenda.close()
+
 	if opcao == 1:
 		funcoes.adicionar()
 	elif opcao == 2:
 		funcoes.listar()
-	elif opcao == 9:
-		exit()
 	else:
 		funcoes.falha()
 

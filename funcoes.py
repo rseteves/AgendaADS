@@ -4,13 +4,14 @@ def bemvindo():
 	print("Selecione uma Opcao")
 	print("1  Adicionar um novo contato")
 	print("2  Listar os contatos da agenda")
+	print("4  Buscar um contato na agenda")
 
 #Funcoes do processo
 def adicionar():
 	print("Adicionar um registro")
 	agenda = open("agendatelefonica.csv",'a')
-	nome = raw_input("Nome do Contato:")
-	telefone = raw_input("Digite o telefone:")
+	nome = input("Nome do Contato:")
+	telefone = input("Digite o telefone:")
 	print("Contato salvo com nome:",nome," e numero",telefone)
 	agenda.write(nome)
 	agenda.write(",")
@@ -27,6 +28,15 @@ def listar():
 		print (agenda.readline())
 		numero = numero + 1
 	print("Listado correctamente")	
+	agenda.close()
+
+def buscar():
+	print("Digite o nome para buscar")
+	buscar = input()
+	agenda = open("agendatelefonica.csv",'r')
+	for line in agenda:
+		if (buscar in line):
+			print("achado : " , line)
 	agenda.close()
 
 def falha():

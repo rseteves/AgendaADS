@@ -21,15 +21,14 @@ def adicionar():
 	agenda.write(",")
 	agenda.write("\n")
 	agenda.close()
-	
+
 def listar():
 	print("Lista de Contatos")
-	agenda = open("agendatelefonica.csv")
-	numero = 0
-	while numero < 25:
-		print (agenda.readline())
-		numero = numero + 1
-	print("Listado correctamente")	
+	with open('agendatelefonica.csv', 'r') as agenda:
+		csvreader = csv.reader(agenda)
+		for row in csvreader:
+			print ('|'.join(row))
+	print("Listado correctamente")
 	agenda.close()
 
 def buscar():

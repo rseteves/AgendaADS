@@ -24,7 +24,6 @@ def listar():
 	print("Lista de Contatos")
 	with open('agendatelefonica.csv', 'r') as agenda:
 		csvreader = csv.reader(agenda)
-		print ('Nome')
 		for row in csvreader:
 			print ('|'.join(row))
 	print("Listado correctamente")

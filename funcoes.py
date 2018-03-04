@@ -32,4 +32,5 @@ def listar():
 def falha():
 	print("Opcao Incorreta")
 def encerramento():
-  print("Você pediu o encerramento do programa")	
+  print("Você pediu o encerramento do programa")
+

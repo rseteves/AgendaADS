@@ -1,6 +1,7 @@
 #Agenda Telefonica
 import funcoes
 
+while opcao!=9:
 funcoes.bemvindo()
 
 #Opcoes do Usuario
@@ -14,7 +15,7 @@ if opcao == 1:
 elif opcao == 2:
 	funcoes.listar()
 elif opcao==9:
-  	funcoes.encerramento()
+	funcoes.encerramento()
 else:
 	funcoes.falha()
 

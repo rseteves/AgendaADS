@@ -1,6 +1,5 @@
 #Agenda Telefonica
 import funcoes
-import csv
 
 funcoes.bemvindo()
 

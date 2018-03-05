@@ -7,14 +7,15 @@ def bemvindo():
 	print("1  Adicionar um novo contato")
 	print("2  Listar os contatos da agenda")
 	print("4  Buscar contato da lista")
+	print("9  Sair da aplicação")
 
 #Funcoes do processo
 def adicionar():
 	print("Adicionar um registro")
 	agenda = open("agendatelefonica.csv",'a')
-	nome = input("Nome do Contato:")
-	telefone = input("Digite o telefone:")
-	print("Contato salvo com nome:",nome," e numero",telefone)
+	nome = input("Nome do Contato: ")
+	telefone = input("Digite o telefone: ")
+	print("Contato salvo com nome:",nome,"e numero",telefone,"\n")
 	agenda.write(nome)
 	agenda.write(",")
 	agenda.write(telefone)
@@ -28,7 +29,7 @@ def listar():
 		csvreader = csv.reader(agenda)
 		for row in csvreader:
 			print ('|'.join(row))
-	print("Listado correctamente")
+	print("Listado correctamente\n")
 	agenda.close()
 
 def buscar():
@@ -44,16 +45,16 @@ def buscar():
                 for linha in lista:
                         if linha[0] == nomeBusca:
                                 print("Dados localizados:")
-                                #print(" ".join(linha))
                                 print("Nome: ", linha[0])
-                                print("Telefone: ", linha[1])
+                                print("Telefone: ", linha[1],"\n")
                                 return
                 print("Nome não encontrado")
                 tentativa = tentativa - 1
-        print("Excedido número de tentativas. O programa será encerrado!")
+        print("Excedido número de tentativas. Você será redirecionado ao menu principal!\n")
+        agenda.close
 
 def falha():
-	print("Opcao Incorreta")
-def encerramento():
-  print("Você pediu o encerramento do programa")
+	print("Opcao Incorreta\n")
 
+def encerramento():
+        print("Você pediu o encerramento do programa")

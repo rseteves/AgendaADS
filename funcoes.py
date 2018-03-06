@@ -33,7 +33,7 @@ def deletar():
         reader = csv.reader(agenda, delimiter=',')
 
         lista = list(reader)
-    listar()
+    listar(0)
     nome = str("")
 
     while nome not in ([row[0] for row in lista]):
@@ -41,14 +41,16 @@ def deletar():
 
     lista.pop([row[0] for row in lista].index(nome))
 
-    with open("agendatelefonica.csv", "w") as f:
+    with open("agendatelefonica.csv", "w", newline="") as f:
         writer = csv.writer(f)
         for row in lista:
             writer.writerow(row)
 
+    print("Contato removido")
+    nome = input("\n Pressione qualquer tecla para continuar: ")
 
-def listar():
-    def listar():
+
+def listar(x):
     print("Lista de Contatos")
     print("[Nome][Telefone]")
     with open("agendatelefonica.csv") as agenda:
@@ -57,17 +59,24 @@ def listar():
             print("Nome : {} >>>>>> Telefone: {}".format(row[0],row[1]))
     print("Listado correctamente")
 
+    if(x == 1):
+        a = input("\n Digite qualquer tecla para continuar: ")
 
 def falha():
     print("Opcao Incorreta")
 
 
 def buscar():
-	busca = input("Digite o nome para procurar")
-	with open("agendatelefonica.csv", "r") as arq:
-            for f in arq:
-                if f.find(busca) >-1:
-                    print ("")
-                else:
-                   print ("Comando Invalido")
-                   break              
+    name = input("Digite o nome para procurar: ")
+    with open("agendatelefonica.csv") as agenda:
+        reader = csv.reader(agenda, delimiter=',')
+        test = None
+        for row in reader:
+            if name in row:
+                test = ("Nome: {} >>>>>> Telefone {} ".format(row[0], row[1]))
+        if test != None:
+                print(test)
+        else:
+            print("Contato não encontrato")
+    
+    name = input("\n Pressione qualquer tecla para continuar.")

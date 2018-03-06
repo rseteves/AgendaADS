@@ -48,14 +48,14 @@ def deletar():
 
 
 def listar():
+    def listar():
     print("Lista de Contatos")
-    agenda = open("agendatelefonica.csv")
-    numero = 0
-    while numero < 25:
-        print(agenda.readline())
-        numero = numero + 1
+    print("[Nome][Telefone]")
+    with open("agendatelefonica.csv") as agenda:
+        reader = csv.reader(agenda, delimiter=',')
+        for row in reader:
+            print("Nome : {} >>>>>> Telefone: {}".format(row[0],row[1]))
     print("Listado correctamente")
-    agenda.close()
 
 
 def falha():
@@ -66,9 +66,8 @@ def buscar():
 	busca = input("Digite o nome para procurar")
 	with open("agendatelefonica.csv", "r") as arq:
             for f in arq:
-                if f.find(busca) >-1
+                if f.find(busca) >-1:
                     print ("")
                 else:
                    print ("Comando Invalido")
-                   break
-                
+                   break              

@@ -8,6 +8,7 @@ def bemvindo():
     print("Selecione uma Opcao")
     print("1  Adicionar um novo contato")
     print("2  Listar os contatos da agenda")
+    print("4  Para procurar contatos na agenda")
     print("5  Remover um contato")
     print("9  Para encerrar programa")
 
@@ -59,3 +60,15 @@ def listar():
 
 def falha():
     print("Opcao Incorreta")
+
+
+def buscar():
+	busca = input("Digite o nome para procurar")
+	with open("agendatelefonica.csv", "r") as arq:
+            for f in arq:
+                if f.find(busca) >-1
+                    print ("")
+                else:
+                   print ("Comando Invalido")
+                   break
+                

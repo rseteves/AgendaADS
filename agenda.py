@@ -15,6 +15,9 @@ while True:
     elif opcao == 2:
         funcoes.listar()
         continue
+    elif opcao == 4:
+        funcoes.buscar()
+        continue
     elif opcao == 5:
         funcoes.deletar()
         continue

@@ -1,6 +1,9 @@
 # Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
+	print("="*12)
 	print("Bem Vindo a Agenda")
+	print("="*12)
+
 	print("Selecione uma Opcao")
 	print("1  Adicionar um novo contato")
 	print("2  Listar os contatos da agenda")
@@ -11,7 +14,9 @@ def bemvindo():
 
 # Funcoes do processo
 def adicionar():
-	print("Adicionar um registro")
+	print("="*12)
+	print("\033[32m Adicionar um registro\033[m")
+	print("="*12)
 	agenda = open("agendatelefonica.csv",'a')
 	nome = input("Nome do Contato:")
 	telefone = input("Digite o telefone:")
@@ -26,7 +31,9 @@ def adicionar():
 
 
 def listar():
-	print("Lista de Contatos")
+	print("="*12)
+	print("\033[32m Lista de Contatos\033[m")
+	print("="*12)
 
 	with open("agendatelefonica.csv") as agenda:
 		for linha in agenda:
@@ -36,7 +43,10 @@ def listar():
 
 
 def remover():
-	print("Digite o nome para remover: ")
+	print("="*12)
+	print("\033[32m Digite o nome para remover:\033[m ")
+	print("="*12
+
 	nome = input()
 	agenda = open("agendatelefonica.csv", "r")
 	linhas = agenda.readlines()
@@ -44,7 +54,9 @@ def remover():
 
 
 def buscar():
-	print("Digite o nome para buscar")
+	print("="*12)
+	print("\033[32m Digite o nome para buscar\033[m")
+	print("="*12)
 	buscar = input()
 	agenda = open("agendatelefonica.csv",'r')
 	for line in agenda:
@@ -56,4 +68,4 @@ def buscar():
 	agenda.close()
 
 def falha():
-	print("Opcao Incorreta")
+	print("\033[31m Opção Incorreta\033[m")

@@ -16,6 +16,8 @@ while opcao != 9:
 		funcoes.adicionar()
 	elif opcao == 2:
 		funcoes.listar()
+	elif opcao == 3:
+		funcoes.remover()
 	elif opcao == 4:
 		funcoes.buscar()
 	elif opcao == 9:

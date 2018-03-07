@@ -4,6 +4,7 @@ def bemvindo():
 	print("Selecione uma Opcao")
 	print("1  Adicionar um novo contato")
 	print("2  Listar os contatos da agenda")
+	print("3  Remover um contato da agenda")
 	print("4  Buscar um contato na agenda")
 	print("9  Sair do sistema")
 
@@ -33,6 +34,13 @@ def listar():
 
 	print("\nListado correctamente\n\n")
 
+
+def remover():
+	print("Digite o nome para remover: ")
+	nome = input()
+	agenda = open("agendatelefonica.csv", "r")
+	linhas = agenda.readlines()
+	# Implementar o restante da função (Mauricio)
 
 
 def buscar():

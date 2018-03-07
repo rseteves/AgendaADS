@@ -40,8 +40,11 @@ def buscar():
 	buscar = input()
 	agenda = open("agendatelefonica.csv",'r')
 	for line in agenda:
-		if (buscar in line):
-			print("achado : " , line)
+		bCount = 0
+		if (buscar.upper() in line.upper()):
+			bCount += 1
+			print("Item {} :".format(bCount) , line)
+	print("================== {} resultado(s) encontrado(s).".format(bCount))
 	agenda.close()
 
 def falha():

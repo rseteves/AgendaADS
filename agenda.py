@@ -6,6 +6,7 @@ funcoes.bemvindo()
 
 opcao = int(input())
 print("Seleccionaste", opcao)
+print()  # pula linha
 
 
 
@@ -28,3 +29,4 @@ while opcao != 9:
 	# Opcoes do Usuario
 	opcao = int(input())
 	print("Seleccionaste", opcao)
+	print()  # pula linha

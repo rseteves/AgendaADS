@@ -26,14 +26,12 @@ def adicionar():
 
 def listar():
 	print("Lista de Contatos")
-	agenda = open("agendatelefonica.csv")
-	linhas = agenda.readlines()
-	for linha in linhas:
-		print (linha)
 
-	print("Listado correctamente")
-	agenda.close()
+	with open("agendatelefonica.csv") as agenda:
+		for linha in agenda:
+			print(linha.strip())
 
+	print("\nListado correctamente\n\n")
 
 
 

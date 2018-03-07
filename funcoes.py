@@ -37,13 +37,12 @@ def close():
 	sys.exit()
 
 def buscarcontato():
-	with open("agendatelefonica.csv", "r") as archive:
-		contato = input('Digite o contato: ')
+        with open("agendatelefonica.csv", "r") as archive:
+                contato = input('Digite o contato: ')
 		for linha in archive:
-			if linha.find(contato) > -1:
-				print('Contatos encontrados: ')
-				print(linha)
-		else:
+                        if linha.find(contato) > -1:
+                                print('Contatos encontrados: ')
+                                print(linha)
+                else:
 			print('Comando invalido!')
 			break 
-			

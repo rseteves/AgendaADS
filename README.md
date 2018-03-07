@@ -9,3 +9,5 @@ Integrantes do grupo
 * Petterson Possidonio - RA1701431
 * Victor Hugo da Silva - RA1510206
 * Matheus de Alcântara Silva - RA1701219
+* Vinicios Ziroldo Gomes - RA1700055
+* Mauricio Queiroz - RA1701427

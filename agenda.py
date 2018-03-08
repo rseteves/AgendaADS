@@ -20,8 +20,6 @@ while opcao != 9:
 		funcoes.remover()
 	elif opcao == 4:
 		funcoes.buscar()
-	elif opcao == 9:
-		agenda.close()
 	else:
 		funcoes.falha()
 

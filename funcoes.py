@@ -67,8 +67,8 @@ def buscar():
 	print("="*12)
 	buscar = input()
 	agenda = open("agendatelefonica.csv",'r')
+	bCount = 0
 	for line in agenda:
-		bCount = 0
 		if (buscar.upper() in line.upper()):
 			bCount += 1
 			print("Item {} :".format(bCount) , line)

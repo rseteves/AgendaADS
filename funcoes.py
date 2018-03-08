@@ -45,14 +45,16 @@ def listar():
 def remover():
 	print("="*12)
 	print("\033[32m Digite o nome para remover:\033[m ")
-	print("="*12
+	print("="*12)
 
 	nome = input()
 	agenda = open("agendatelefonica.csv", "r")
 	linhas = agenda.readlines()
+
 	for linha in linhas:
-		if nome in linhas:
-			linhas.remove(linhas)
+		if nome in linha:
+			linhas.remove(linha)
+
 	agenda.close()
 	agenda = open("agendatelefonica.csv", "w")
 	agenda.writelines(linhas)

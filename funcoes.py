@@ -17,7 +17,7 @@ def adicionar():
 	agenda = open("agendatelefonica.csv",'a')
 	nome = input("Nome do Contato:")
 	telefone = input("Digite o telefone:")
-	print("Contato salvo com nome:",nome," e numero",telefone)
+	print("Contato salvo com nome:",nome," e numero",telefone, "\n")
 	agenda.write(nome)
 	agenda.write(", ")
 	agenda.write(telefone)
@@ -27,7 +27,7 @@ def adicionar():
 	
 	
 def listar():
-	print("Lista de Contatos")
+	print("Lista de Contatos:")
 	with open("agendatelefonica.csv", "r") as file:
 		for linha in file:
 			print(linha)

@@ -25,26 +25,21 @@ def adicionar():
 	agenda.close()
 
 def remover():
-        lista = []
-        print("Remover um contato")
-        with open("agendatelefonica.csv") as agenda:
-                reader = csv.reader(agenda)
-                for linha in reader:
-                        lista.append(linha)
+    lista = []
+    print("Remover um contato")
+    with open("agendatelefonica.csv") as agenda:
+        reader = csv.reader(agenda)
+        for linha in reader:
+                lista.append(linha)
         nome = input('Nome: ')
-        for i in range (len(lista)):
-                if lista[i][0] == nome:
-                        print('Excluir {}? (s/n): '.format(nome))
-                        sn = input()
-                        if sn == 's' or 'Sim' or 'sim':
-                                lista.remove(lista[i])
-#                                agenda = open('agendatelefonica.csv', 'wb') #se habilitar essa linha, apaga todos os contatos, mesmo selecionando apenas 1.
-                                print('Contato removido com sucesso!')
-                                print('Contatos restantes: \n',lista,'\n')
-                                agenda.close()
-                        break
-                else:
-			print ('**** Contato não existe ****')
+        sn = input('Excluir {}? (s/n): '.format(nome))
+        if sn == 's':
+            lista.pop(0)
+            agenda = open('agendatelefonica.csv', 'w')
+            for x in lista:
+                agenda.write(', '.join(x) + '\n')
+                print('Contato removido com sucesso!\n')
+
 def listar():
 	print("Lista de Contatos")
 	with open('agendatelefonica.csv', 'r') as agenda:

@@ -11,3 +11,4 @@ Integrantes do grupo
 * Matheus de Alcântara Silva - RA1701219
 * Vinicios Ziroldo Gomes - RA1700055
 * Mauricio Queiroz - RA1701427
+* Abel Separovich Cassiano - RA1701290

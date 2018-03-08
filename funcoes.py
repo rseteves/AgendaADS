@@ -7,6 +7,7 @@ def bemvindo():
 	print("1  Adicionar um novo contato")
 	print("2  Listar os contatos da agenda")
 	print("4  Buscar contato da lista")
+	print("5  Remover contato da lista")
 	print("9  Sair da aplicação")
 
 #Funcoes do processo
@@ -23,6 +24,25 @@ def adicionar():
 	agenda.write("\n")
 	agenda.close()
 
+def remover():
+    lista = []
+    print("Remover um contato")
+    with open("agendatelefonica.csv") as agenda:
+        reader = csv.reader(agenda)
+        for linha in reader:
+                lista.append(linha)
+        nome = input('Nome: ')
+        sn = input('Excluir {}? (s/n): '.format(nome))
+        num_linha = lista.index(linha)
+        if nome != linha[0]:
+                print ("Nome invalido")
+                agenda.close()
+        elif sn == 's':
+                lista.pop(num_linha)
+                print('Contato removido com sucesso!\n')
+                agenda = open('agendatelefonica.csv', 'w')
+                for x in lista:
+                        agenda.write(', '.join(x) + '\n')
 def listar():
 	print("Lista de Contatos")
 	with open('agendatelefonica.csv', 'r') as agenda:

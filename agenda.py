@@ -16,6 +16,8 @@ while opcao != "9":
                 funcoes.listar()
         elif opcao == "4":
                 funcoes.buscar()
+        elif opcao == "5":
+                funcoes.remover()
         elif opcao == "9":
                 funcoes.encerramento()
         else:

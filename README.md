@@ -12,3 +12,4 @@ Integrantes do grupo
 * Vinicios Ziroldo Gomes - RA1700055
 * Mauricio Queiroz - RA1701427
 * Abel Separovich Cassiano - RA1701290
+* Victor Tolesano Gonçalves - RA1600936

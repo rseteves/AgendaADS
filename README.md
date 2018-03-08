@@ -1,4 +1,9 @@
-Agenda V0.1
-================================
-
-Agenda realizada em python
+Agenda ADS
+A aplicação tem como objetivo a organização e armazenamento de informações, quando inserido caracteres (nome) e numéricos (telefone).
+Inicialmente foi efetuado o fork do repositório de resteves. Efetuado o commit Inicial, foi implementado através da opção “9”, uma função de encerramento do programa, bem como, utilizada uma estrutura de repetição para que o programa responda favoravelmente.
+Foi implementado uma função de busca na agenda, através da opção 4
+Na função buscar, nós armazenamos arquivo de extensão csv e fazemos um for varrendo linha a linha adicionando a mesma em um array.
+A seguir fazemos um while para contabilizar a quantidade de tentativas para buscar o nome, dentro do while há outro for que irá varrer cada linha da lista onde utilizando um if iremos comparar o nome digitado com o nome armazenado no arquivo csv. Ao localizar ele apresenta o nome e o telefone da pessoa desejada. Se não localizar, ele apresenta uma mensagem informando que não foi localizado, será possível 3 tentativas de busca, após a terceira tentativa ele sai da função.
+Foi melhorada a função listar contatos da agenda, através da opção “2”, através da função implementada falha, utilizando estrutura de repetição e join.
+Por fim, foi implementada a função para remover contatos, através da opção “5”, o arquivo csv é armazenado a uma variável e fazemos um for varrendo linha a linha adicionando a mesma em um lista.
+A função ira solicitar um nome a ser removido do arquivo csv. com um if é realizado a verificação de que o nome existe ou não no arquivo, se não existir ira exibir uma mensagem e retornar ao menu inicial, se existir ele ira perguntar se realmente deseja remover, se dizer que não desejar ele ira retornar ao menu inicial, se disser que sim, a função utilizara o comando índex do csv ira armazenar a posição em que esta a palavra que vai ser removida, com o comando pop é removido da lista o que estava contido dentro da posição que o índex armazenou, sendo assim, abrindo o arquivo em modo write e com um for é escrito no arquivo csv os dados que ainda estão armazenados na lista, utilizando join para transformar de lista em string.

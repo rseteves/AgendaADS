@@ -40,6 +40,21 @@ def buscarcontato():
 		if linha.find(contato) > -1:
 			print('Contatos encontrados: ')
 			print(linha)
+
+def removerContato():
+	with open("agendatelefonica.csv") as file:
+		archive = csv.reader(file)
+		for contato in archive:
+			contatoLista.append(contato)
+			nomeContato = input("Digite o contato que deseja deletar: ")
+			escolha = input("Deseja realmente deletar o contato "+nomeContato+ "?")
+			if escolha == 's' or escolha == 'S':
+				contatoLista.pop(0)
+				agenda = open("agendatelefonica.csv", "w")
+				for item in contatoLista:
+					agenda.wirte(',' .join(item) +"\n")
+					print(nomeContato + "removido")
+
 		else:
-			print('Comando invalido!')
-			break 
+		print('Comando invalido!')
+		break 

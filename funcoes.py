@@ -34,16 +34,15 @@ def remover():
         nome = input('Nome: ')
         sn = input('Excluir {}? (s/n): '.format(nome))
         num_linha = lista.index(linha)
-        if nome != linha:
+        if nome != linha[0]:
                 print ("Nome invalido")
                 agenda.close()
         elif sn == 's':
-            lista.pop(num_linha)
-            agenda = open('agendatelefonica.csv', 'w')
-            for x in lista:
-                    agenda.write(', '.join(x) + '\n')
-                    print('Contato removido com sucesso!\n')
-
+                lista.pop(num_linha)
+                print('Contato removido com sucesso!\n')
+                agenda = open('agendatelefonica.csv', 'w')
+                for x in lista:
+                        agenda.write(', '.join(x) + '\n')
 def listar():
 	print("Lista de Contatos")
 	with open('agendatelefonica.csv', 'r') as agenda:

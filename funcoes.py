@@ -25,24 +25,21 @@ def adicionar():
 	
 def listar():
 	print("Lista de Contatos")
-	agenda = open("agendatelefonica.csv")
-	numero = 0
-	while numero < 25:
-		print (agenda.readline())
-		numero = numero + 1
-	print("Listado correctamente")	
-	# agenda.close()
+	with open("agendatelefonica.csv", "r") as file:
+		for linha in file:
+			print(linha)
+	
 
 def close():
 	sys.exit()
 
 def buscarcontato():
-        with open("agendatelefonica.csv", "r") as archive:
-                contato = input('Digite o contato: ')
-		for linha in archive:
-                        if linha.find(contato) > -1:
-                                print('Contatos encontrados: ')
-                                print(linha)
-                else:
+	with open("agendatelefonica.csv", "r") as archive:
+		contato = input('Digite o contato: ')
+	for linha in archive:
+		if linha.find(contato) > -1:
+			print('Contatos encontrados: ')
+			print(linha)
+		else:
 			print('Comando invalido!')
 			break 

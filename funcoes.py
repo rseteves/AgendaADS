@@ -50,7 +50,13 @@ def remover():
 	nome = input()
 	agenda = open("agendatelefonica.csv", "r")
 	linhas = agenda.readlines()
-	# Implementar o restante da função (Mauricio)
+	for linha in linhas:
+		if nome in linhas:
+			linhas.remove(linhas)
+	agenda.close()
+	agenda = open("agendatelefonica.csv", "w")
+	agenda.writelines(linhas)
+	agenda.close()
 
 
 def buscar():

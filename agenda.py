@@ -4,16 +4,20 @@ import funcoes
 funcoes.bemvindo()
 
 #Opcoes do Usuario
-opcao = int(raw_input())
+opcao = int(input())
 print("Seleccionaste", opcao)
 
 
 #Estrutura de controle
 if opcao == 1:
-	funcoes.adicionar()
+     funcoes.adicionar()       
 elif opcao == 2:
-	funcoes.listar()
+      funcoes.listar()
+elif opcao == 4:
+      funcoes.buscar(input("Digite o nome"))
+elif opcao == 9:
+       exit()
 else:
-	funcoes.falha()
+     funcoes.falha() 
 
 

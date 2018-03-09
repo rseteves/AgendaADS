@@ -19,5 +19,3 @@ elif opcao == 5:
         funcoes.apaga()
 else:
        funcoes.falha()
-
-

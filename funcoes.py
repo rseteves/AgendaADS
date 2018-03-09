@@ -26,5 +26,16 @@ def listar():
                 print (">>>"agenda.readline()"<<<")		
         print("Listado corretamente")
         agenda.close()
+	
+def buscar(nome):
+    agenda = open("agendatelefonica.csv",'r')
+    for linha in agenda:
+        linha=linha.rstrip()
+    if nome in linha:
+        print(linha)
+    else:
+        print("Nome não localizado")
+    agenda.close()
+
 def falha():
 	print("Opcao Incorreta")

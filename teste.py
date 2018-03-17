@@ -4,7 +4,7 @@ errolistar = False
 
 listar = funcoes.listar()
 
-if list != "":
+if listar != "":
   errolistar = True
 
 if errolistar:

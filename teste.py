@@ -1,13 +1,13 @@
 import funcoes.py
 import sys
-errolist = False
+errolistar = False
 
-listar = list
+listar = funcoes.listar()
 
 if list != "":
-  errolist = True
+  errolistar = True
 
-if errolist:
+if errolistar:
 	sys.exit(1)
 else:
 	sys.exit(0)

@@ -1,4 +1,4 @@
-import funcoes.py
+import funcoes
 import sys
 errolistar = False
 

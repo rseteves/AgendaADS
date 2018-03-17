@@ -1,0 +1,5 @@
+Entregar Ac:
+1-Arquivo de testes - testando qualquer coisa.
+2-Arquivo de class do python (a agênda) funcionando (no minimo).
+3-Arquivo txt com o link do github (e se for feito, link do trevis).
+4-(opcional) Rodar os testes altomaticamente no trevis

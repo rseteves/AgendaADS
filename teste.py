@@ -1,4 +1,4 @@
 import funcoes
 
 def test_funcoes():
-	assert buscar("Renato") == "Adriano"
+	assert funcoes.buscar("Renato") == "Adriano"

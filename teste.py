@@ -1,4 +1,4 @@
 import funcoes
 
 def test_funcoes():
-	assert listar() == ""
+	assert listar() == 123

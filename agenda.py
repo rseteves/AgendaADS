@@ -5,7 +5,7 @@ opcao = "0"
 
 #Opcoes do Usuario
 while opcao != "9":
-        funcoes.bemvindo()
+        funcoes.bemvindo(x)
         opcao = input()
         print("Seleccionaste", opcao)
 
@@ -15,11 +15,11 @@ while opcao != "9":
         elif opcao == "2":
                 funcoes.listar()
         elif opcao == "4":
-                funcoes.buscar()
+               return funcoes.buscar()
         elif opcao == "5":
                 funcoes.remover()
         elif opcao == "9":
-                funcoes.encerramento()
+               return funcoes.encerramento()
         else:
                 funcoes.falha()
 

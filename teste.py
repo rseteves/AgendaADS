@@ -5,4 +5,4 @@ errolistar = False
 x="Renato"
 listar = funcoes.buscar(x)
 
-assert listar == "Renato"
+assert listar == "Ren"

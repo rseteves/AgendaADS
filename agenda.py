@@ -5,7 +5,7 @@ opcao = "0"
 
 #Opcoes do Usuario
 while opcao != "9":
-        funcoes.bemvindo(x)
+        funcoes.bemvindo()
         opcao = input()
         print("Seleccionaste", opcao)
 

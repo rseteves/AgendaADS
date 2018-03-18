@@ -1,4 +1,8 @@
-import funcoes
 
-def test_funcoes():
-	assert funcoes.buscar("Renato") == "Adriano"
+import funcoes
+import sys
+errolistar = False
+
+listar = funcoes.listar()
+
+assert listar == ""

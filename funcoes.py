@@ -52,7 +52,7 @@ def listar():
 	print("Listado correctamente\n")
 	agenda.close()
 
-def buscar():
+def buscar(x):
         tentativa = 3
         lista = []
         print("Busca de Contatos")
@@ -61,13 +61,13 @@ def buscar():
                 for linha in reader:
                         lista.append(linha)
         while tentativa > 0:
-                nomeBusca = input("Informe um nome para ser localizado: ")
+                nomeBusca = x #input("Informe um nome para ser localizado: ")
                 for linha in lista:
                         if linha[0] == nomeBusca:
-                                print("Dados localizados:")
-                                print("Nome: ", linha[0])
-                                print("Telefone: ", linha[1],"\n")
-                                return
+                                #print("Dados localizados:")
+                                return linha[0]#print("Nome: ", linha[0])
+                                #print("Telefone: ", linha[1],"\n")
+                                #return
                 print("Nome não encontrado")
                 tentativa = tentativa - 1
         print("Excedido número de tentativas. Você será redirecionado ao menu principal!\n")

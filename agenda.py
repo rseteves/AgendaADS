@@ -6,7 +6,7 @@ opcao = "0"
 #Opcoes do Usuario
 while opcao != "9":
         funcoes.bemvindo(x)
-        opcao = input()
+        opcao = x #input()
         print("Seleccionaste", opcao)
 
         #Estrutura de controle
@@ -15,11 +15,11 @@ while opcao != "9":
         elif opcao == "2":
                 funcoes.listar()
         elif opcao == "4":
-               return funcoes.buscar()
+                return funcoes.buscar()
         elif opcao == "5":
                 funcoes.remover()
         elif opcao == "9":
-               return funcoes.encerramento()
+                funcoes.encerramento()
         else:
                 funcoes.falha()
 

@@ -2,7 +2,7 @@
 import funcoes
 import sys
 errolistar = False
+x=Renato
+listar = funcoes.buscar(x)
 
-listar = funcoes.listar()
-
-assert listar == ""
+assert listar == "Renato"

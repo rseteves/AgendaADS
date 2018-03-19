@@ -23,10 +23,8 @@ def adicionar():
     agenda.write(nome)
     agenda.write(",")
     agenda.write(telefone)
-    agenda.write(",")
     agenda.write("\n")
     agenda.close()
-
 
 def deletar():
     with open("agendatelefonica.csv") as agenda:
@@ -54,13 +52,15 @@ def listar(x):
     print("Lista de Contatos")
     print("[Nome][Telefone]")
     with open("agendatelefonica.csv") as agenda:
-        reader = csv.reader(agenda, delimiter=',')
+        reader = csv.reader(agenda)
+        lista = list(reader)
         for row in reader:
             print("Nome : {} >>>>>> Telefone: {}".format(row[0],row[1]))
     print("Listado correctamente")
 
-    if(x == 1):
+    if x==1:
         a = input("\n Digite qualquer tecla para continuar: ")
+    return len(lista)
 
 def falha():
     print("Opcao Incorreta")
@@ -74,7 +74,7 @@ def buscar():
         for row in reader:
             if name in row:
                 test = ("Nome: {} >>>>>> Telefone {} ".format(row[0], row[1]))
-        if test != None:
+        if test is not None:
                 print(test)
         else:
             print("Contato não encontrato")

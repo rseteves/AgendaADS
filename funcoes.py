@@ -55,7 +55,7 @@ def listar():
 def buscar(x):
         tentativa = 3
         lista = []
-	listaTeste = []
+	lt = []
         print("Busca de Contatos")
         with open("agendatelefonica.csv") as agenda:
                 reader = csv.reader(agenda)
@@ -69,8 +69,8 @@ def buscar(x):
                                 #print("Nome: ", linha[0])
                                 #print("Telefone: ", linha[1],"\n")
                                 #return
-				listaTeste.append(linha[0])
-				listaTeste.append(linha[1])
+				lt.append(linha[0])
+				lt.append(linha[1])
 				print(listaTeste)
                 print("Nome não encontrado")
                 tentativa = tentativa - 1

@@ -55,7 +55,7 @@ def listar():
 def buscar(x):
         tentativa = 3
         lista = []
-	lista_teste-[]
+	lista_teste=[]
         print("Busca de Contatos")
         with open("agendatelefonica.csv") as agenda:
                 reader = csv.reader(agenda)

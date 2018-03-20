@@ -55,13 +55,13 @@ def listar():
 def buscar(x):
         tentativa = 3
         lista = []
-	lt = []
         print("Busca de Contatos")
         with open("agendatelefonica.csv") as agenda:
                 reader = csv.reader(agenda)
                 for linha in reader:
                         lista.append(linha)
         while tentativa > 0:
+		lt=[]
                 nomeBusca = x #input("Informe um nome para ser localizado: ")
                 for linha in lista:
                         if linha[0] == nomeBusca:

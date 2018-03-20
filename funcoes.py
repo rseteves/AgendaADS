@@ -72,7 +72,7 @@ def buscar(x):
                                 #return
                                 lt.append(linha[0])
                                 lt.append(linha[1])
-                                print(' '.join(lt))
+                                print('|'.join(lt))
                 print("Nome não encontrado")
                 tentativa = tentativa - 1
         print("Excedido número de tentativas. Você será redirecionado ao menu principal!\n")

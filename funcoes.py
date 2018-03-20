@@ -52,11 +52,13 @@ def listar():
 	print("Listado correctamente\n")
 	agenda.close()
 
+import csv
 def buscar(x):
         tentativa = 3
         lista = []
+        lt=[]
         print("Busca de Contatos")
-        with open("agendatelefonica.csv") as agenda:
+        with open("/dscard/agendatel.csv") as agenda:
                 reader = csv.reader(agenda)
                 for linha in reader:
                         lista.append(linha)
@@ -65,9 +67,12 @@ def buscar(x):
                 for linha in lista:
                         if linha[0] == nomeBusca:
                                 #print("Dados localizados:")
-                                return linha[0]#print("Nome: ", linha[0])
+                                #print("Nome: ", linha[0])
                                 #print("Telefone: ", linha[1],"\n")
                                 #return
+                                lt.append(linha[0])
+                                lt.append(linha[1])
+                                print(lt)
                 print("Nome não encontrado")
                 tentativa = tentativa - 1
         print("Excedido número de tentativas. Você será redirecionado ao menu principal!\n")

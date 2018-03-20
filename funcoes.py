@@ -58,7 +58,7 @@ def buscar(x):
         lista = []
         lt=[]
         print("Busca de Contatos")
-        with open("/dscard/agendatelefonica.csv") as agenda:
+        with open("agendatelefonica.csv") as agenda:
                 reader = csv.reader(agenda)
                 for linha in reader:
                         lista.append(linha)

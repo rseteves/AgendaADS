@@ -15,14 +15,13 @@ def bemvindo():
 #Funcoes do processo
 def adicionar(x,y):
 	agenda = {
-   
-    'guilherme':[ 123456,"1234567"],
-    'gigio': ["123456789", "987654321"]
-}
-nome=x
-tel=y
-agenda[nome]=tel
-print(agenda)
+	'guilherme':[ 123456,"1234567"],
+    	'gigio': ["123456789", "987654321"]
+	}
+	nome=x
+	tel=y
+	agenda[nome]=tel
+	print(agenda)
 	
 	
 	#print("Adicionar um registro")

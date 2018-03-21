@@ -21,7 +21,6 @@ def adicionar(x,y):
 	nome=x
 	tel=y
 	agenda[nome]=tel
-	print(agenda)
 	
 	
 	#print("Adicionar um registro")

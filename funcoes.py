@@ -17,7 +17,7 @@ def adicionar(x,y):
 	print("Adicionar um registro")
 	agenda = open("agendatelefonica.csv",'a')
 	nome = x
-	telefone = y
+	telefone = "y"
 	print("Contato salvo com nome:",nome," e numero",telefone)
 	agenda.write(nome)
 	agenda.write(",")

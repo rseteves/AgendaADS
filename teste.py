@@ -1,8 +1,7 @@
 import funcoes
-funcoes.adicionar("Renato","123")
+funcoes.adicionar("Gui","123")
 
-agenda = open("agendatelefonica.csv",'a')
 print(agenda)
-if "Renato" in agenda:
-              assert print("Renato", agenda["Renato"])
+if "Gui" in agenda:
+              assert print("Gui", agenda["Gui"])
         

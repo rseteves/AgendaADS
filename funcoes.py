@@ -14,17 +14,28 @@ def bemvindo():
 
 #Funcoes do processo
 def adicionar(x,y):
-	print("Adicionar um registro")
-	agenda = open("agendatelefonica.csv",'a')
-	nome = x
-	telefone = y
-	print("Contato salvo com nome:",nome," e numero",telefone)
-	agenda.write(nome)
-	agenda.write(",")
-	agenda.write(telefone)
-	agenda.write(",")
-	agenda.write("\n")
-	agenda.close()
+	agenda = {
+   
+    'guilherme':[ 123456,"1234567"],
+    'gigio': ["123456789", "987654321"]
+}
+nome=x
+tel=y
+agenda[nome]=tel
+print(agenda)
+	
+	
+	#print("Adicionar um registro")
+	#agenda = open("agendatelefonica.csv",'a')
+	#nome = input("Nome do Contato:")
+	#telefone = input("Digite o telefone:")
+	#print("Contato salvo com nome:",nome," e numero",telefone)
+	#agenda.write(nome)
+	#agenda.write(",")
+	#agenda.write(telefone)
+	#agenda.write(",")
+	#agenda.write("\n")
+	#agenda.close()
 	
 def listar():
 	print("Lista de Contatos")

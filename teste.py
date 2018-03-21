@@ -1,6 +1,6 @@
 import funcoes
 a="Gigio"
-b=1234
+b="1234"
 funcoes.adicionar(a,b)
 
 agenda = open("agendatelefonica.csv",'a')

@@ -1,13 +1,8 @@
+
 import funcoes
-import sys
-errolistar = False
 
-listar = funcoes.listar()
+x="Renato"
+listar = funcoes.buscar(x)
 
-if listar != "":
-  errolistar = True
-
-if errolistar:
-	sys.exit(1)
-else:
-	sys.exit(0)
+assert listar == "Renato|123"
+print(listar)

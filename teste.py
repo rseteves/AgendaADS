@@ -1,6 +1,10 @@
 import funcoes
-funcoes.adicionar("Gui","123")
+import csv
 
-if "Gui" in agenda{}:
-              assert print("Gui", agenda["Gui"])
-        
+funcoes.adicionar("Gigio","222")
+print("Lista de Contatos")
+with open('agendatelefonica.csv', 'r') as agenda:
+    csvreader = csv.reader(agenda)
+    for row in csvreader:
+        if ','.join(row) == "Gigio,222,": 
+            return (True)

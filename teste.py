@@ -1,4 +1,4 @@
-import funcoes
+from funcoes import adicionar
 import csv
 
 def teste():

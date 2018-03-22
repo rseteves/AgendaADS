@@ -14,18 +14,19 @@ def bemvindo():
 
 #Funcoes do processo
 
-def adicionar():
+def adicionar(a,b):
 	print("Adicionar um registro")
 	agenda = open("agendatelefonica.csv",'a')
-	nome = raw_input("Nome do Contato:")
-	telefone = raw_input("Digite o telefone:")
-	print("Contato salvo com nome:",nome," e numero",telefone)
+	nome = a #input("Nome do Contato: ")
+	telefone = b #input("Digite o telefone: ")
+	print("Contato salvo com nome:",nome,"e numero",telefone,"\n")
 	agenda.write(nome)
 	agenda.write(",")
 	agenda.write(telefone)
 	agenda.write(",")
 	agenda.write("\n")
 	agenda.close()
+	print("adicionado")
 
 def listar():
 	print("Lista de Contatos")

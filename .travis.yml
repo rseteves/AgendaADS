@@ -1,7 +1,8 @@
 language: python
 python:
   - "3.4"
-install:
-  - "pip install --upgrade pip && pip install -r requirements.txt"
+before_install:
+  - "pip install -U pip"
+  - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
 script:
   - python teste.py

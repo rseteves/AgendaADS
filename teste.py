@@ -1,4 +1,4 @@
-import funcoes
+from funcoes import *
 import csv
 
 def teste():
@@ -9,6 +9,6 @@ def teste():
             if ','.join(row) == "Gigio,222,": 
                 return (True)
 
-x = funcoes.adicionar("Gigio","222")
+x = adicionar("Gigio","222")
 
 assert x == True

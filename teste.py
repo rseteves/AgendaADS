@@ -1,4 +1,5 @@
 import funcoes
+import csv
 
 x="Gigio"
 y="222"

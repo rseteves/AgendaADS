@@ -27,7 +27,7 @@ def adicionar(a,b):
 	agenda.write(",")
 	agenda.write("\n")
 	agenda.close()
-	x = teste()
+	x = teste.teste()
 	print("adicionado")
 	return x
 

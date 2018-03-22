@@ -1,7 +1,6 @@
 import funcoes
 import sys
 import shelve
-import teste
 import csv
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 

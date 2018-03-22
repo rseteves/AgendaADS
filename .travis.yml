@@ -1,5 +1,7 @@
 language: python
 python:
   - "3.4"
+Install:
+  - pip install -U setuptools==33.1.1
 script:
   - python teste.py

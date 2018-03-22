@@ -31,19 +31,6 @@ def adicionar(a,b):
 	print("adicionado")
 	return x
 
-'''def adicionar():
-	print("Adicionar um registro")
-	agenda = open("agendatelefonica.csv",'a')
-	nome = raw_input("Nome do Contato:")
-	telefone = raw_input("Digite o telefone:")
-	print("Contato salvo com nome:",nome," e numero",telefone)
-	agenda.write(nome)
-	agenda.write(",")
-	agenda.write(telefone)
-	agenda.write(",")
-	agenda.write("\n")
-	agenda.close()
-'''	
 def listar():
 	print("Lista de Contatos")
 	agenda = open("agendatelefonica.csv")

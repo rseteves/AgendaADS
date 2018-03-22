@@ -1,7 +1,7 @@
 import funcoes
 import sys
 import shelve
-
+import teste
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 
 def bemvindo():
@@ -14,7 +14,24 @@ def bemvindo():
 
 #Funcoes do processo
 
-def adicionar():
+
+def adicionar(a,b):
+	print("Adicionar um registro")
+	agenda = open("agendatelefonica.csv",'a')
+	nome = a #input("Nome do Contato: ")
+	telefone = b #input("Digite o telefone: ")
+	print("Contato salvo com nome:",nome,"e numero",telefone,"\n")
+	agenda.write(nome)
+	agenda.write(",")
+	agenda.write(telefone)
+	agenda.write(",")
+	agenda.write("\n")
+	agenda.close()
+	x = teste()
+	print("adicionado")
+	return x
+
+'''def adicionar():
 	print("Adicionar um registro")
 	agenda = open("agendatelefonica.csv",'a')
 	nome = raw_input("Nome do Contato:")
@@ -26,7 +43,7 @@ def adicionar():
 	agenda.write(",")
 	agenda.write("\n")
 	agenda.close()
-	
+'''	
 def listar():
 	print("Lista de Contatos")
 	agenda = open("agendatelefonica.csv")

@@ -28,7 +28,9 @@ def adicionar(a,b):
 	agenda.write(",")
 	agenda.write("\n")
 	agenda.close()
-	print("OI")
+	x = teste.teste()
+	return x
+
 
 def listar():
 	print("Lista de Contatos")

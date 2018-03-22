@@ -9,4 +9,7 @@ def teste():
             if ','.join(row) == "Gigio,222,": 
                 return (True)
 
+
+x="Gigio"
+y="222"
 assert funcoes.adicionar(x,y) == True

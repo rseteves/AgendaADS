@@ -10,6 +10,5 @@ def teste():
                 return (True)
 
 
-x="Gigio"
-y="222"
-assert funcoes.adicionar(x,y) == True
+
+assert funcoes.adicionar("Gigio","222") == True

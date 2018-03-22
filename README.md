@@ -1,4 +1,5 @@
-Agenda ADS
+Agenda ADS:
+
 A aplicação tem como objetivo a organização e armazenamento de informações, quando inserido caracteres (nome) e numéricos (telefone).
 Inicialmente foi efetuado o fork do repositório de resteves. Efetuado o commit Inicial, foi implementado através da opção “9”, uma função de encerramento do programa, bem como, utilizada uma estrutura de repetição para que o programa responda favoravelmente.
 Foi implementado uma função de busca na agenda, através da opção 4

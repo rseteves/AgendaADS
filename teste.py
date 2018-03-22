@@ -1,14 +1,7 @@
 import funcoes
-import csv
 
-def teste():
-    print("Lista de Contatos")
-    with open('agendatelefonica.csv', 'r') as agenda:
-        csvreader = csv.reader(agenda)
-        for row in csvreader:
-            if ','.join(row) == "Gigio,222,": 
-                return (True)
+x="Renato"
+listar = funcoes.buscar(x)
 
-x = funcoes.adicionar("Gigio","222")
-
-assert x == True
+assert listar == "Renato|123"
+print(listar)

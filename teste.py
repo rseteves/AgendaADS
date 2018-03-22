@@ -1,7 +1,16 @@
 import funcoes
 
-x="Renato"
-listar = funcoes.buscar(x)
+x="Gigio"
+y="222"
+t=funcoes.adicionar(x,y)
 
-assert listar == "Renato|123"
-print(listar)
+print("Lista de Contatos")
+with open('agendatelefonica.csv', 'r') as agenda:
+    csvreader = csv.reader(agenda)
+    for row in csvreader:
+        if ','.join(row) == "Gigio,222,": 
+            t=(True)
+
+
+
+assert t == True

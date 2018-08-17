@@ -1,11 +1,10 @@
-#Agenda Telefonica
 import funcoes
 
 funcoes.bemvindo()
 
 #Opcoes do Usuario
-opcao = int(raw_input())
-print("Seleccionaste", opcao)
+opcao = int(input())
+print("Você Selecionou:", opcao)
 
 
 #Estrutura de controle
@@ -15,5 +14,4 @@ elif opcao == 2:
 	funcoes.listar()
 else:
 	funcoes.falha()
-
 

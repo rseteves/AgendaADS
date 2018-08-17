@@ -1,12 +1,23 @@
 import sys
-
+import csv
+#Faz a busca baseado no nome escolhido
+def busca():
+    nome_arquivo = csv.reader(open('agendatelefonica.csv', 'r'))
+    #concluido de que as pessoas neste programa não terão nomes iguais
+    nome = input("Digite o nome procurado: ")
+    #imprimir resultado
+    for rows in nome_arquivo:
+        if rows[0] == nome:
+                print("Contato buscado: " , rows)
+    
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
 	print("Bem Vindo a Agenda")
 	print("\nSelecione uma opção:")
 	print("1 -> Adicionar um novo contato")
 	print("2 -> Listar os contatos da agenda")
-	print("3 -> Sair do programa")
+  print("3 -> Buscar um contato")
+	print("4 -> Sair do programa")
 
 #Funcoes do processo
 def adicionar():

@@ -1,7 +1,8 @@
 import csv
-
+#Faz a busca baseado no nome escolhido
 def busca():
     nome_arquivo = csv.reader(open('agendatelefonica.csv', 'r'))
+    #concluido de que as pessoas neste programa não terão nomes iguais
     nome = input("Digite o nome procurado: ")
     #imprimir resultado
     for rows in nome_arquivo:
@@ -43,4 +44,3 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
-

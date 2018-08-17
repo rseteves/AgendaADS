@@ -1,16 +1,28 @@
+import csv
+
+def busca():
+    nome_arquivo = csv.reader(open('agendatelefonica.csv', 'r'))
+    nome = input("Digite o nome procurado: ")
+    #imprimir resultado
+    for rows in nome_arquivo:
+        if rows[0] == nome:
+                print("Contato buscado: " , rows)
+    
+
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
 	print("Bem Vindo a Agenda")
 	print("Selecione uma Opcao")
 	print("1  Adicionar um novo contato")
 	print("2  Listar os contatos da agenda")
+	print("3  Para buscar um contato")
 
 #Funcoes do processo
 def adicionar():
 	print("Adicionar um registro")
 	agenda = open("agendatelefonica.csv",'a')
-	nome = raw_input("Nome do Contato:")
-	telefone = raw_input("Digite o telefone:")
+	nome = input("Nome do Contato:")
+	telefone = input("Digite o telefone:")
 	print("Contato salvo com nome:",nome," e numero",telefone)
 	agenda.write(nome)
 	agenda.write(",")
@@ -31,3 +43,4 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
+

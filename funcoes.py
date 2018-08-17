@@ -1,3 +1,4 @@
+import sys
 import csv
 #Faz a busca baseado no nome escolhido
 def busca():
@@ -9,14 +10,14 @@ def busca():
         if rows[0] == nome:
                 print("Contato buscado: " , rows)
     
-
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
 	print("Bem Vindo a Agenda")
-	print("Selecione uma Opcao")
-	print("1  Adicionar um novo contato")
-	print("2  Listar os contatos da agenda")
-	print("3  Para buscar um contato")
+	print("\nSelecione uma opção:")
+	print("1 -> Adicionar um novo contato")
+	print("2 -> Listar os contatos da agenda")
+  print("3 -> Buscar um contato")
+	print("4 -> Sair do programa")
 
 #Funcoes do processo
 def adicionar():
@@ -44,3 +45,7 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
+
+def sairDoPrograma():
+	print("\nA aplicação foi encerrada!")
+	sys.exit()

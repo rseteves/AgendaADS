@@ -1,5 +1,3 @@
-import sys
-
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
 	print("Bem Vindo a Agenda")
@@ -34,7 +32,3 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
-
-def sairDoPrograma():
-	print("\nA aplicação foi encerrada!")
-	sys.exit()

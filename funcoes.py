@@ -1,4 +1,6 @@
 #Mensagem de Bem Vindo e Opcoes ao Usuario
+import csv
+
 def bemvindo():
 	print("Bem Vindo a Agenda")
 	print("Selecione uma Opcao")
@@ -22,11 +24,10 @@ def adicionar():
 def listar():
 	print("Lista de Contatos")
 	agenda = open("agendatelefonica.csv")
-	numero = 0
-	while numero < 25:
-		print (agenda.readline())
-		numero = numero + 1
-	print("Listado correctamente")	
+	contact = csv.reader(agenda)
+	for y in contact:
+		print (y)
+	print("Listado corretamente")
 	agenda.close()
 
 def falha():

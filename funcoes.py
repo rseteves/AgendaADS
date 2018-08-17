@@ -1,3 +1,4 @@
+#Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
 	print("Bem Vindo a Agenda")
 	print("Selecione uma Opcao")
@@ -29,4 +30,3 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
-

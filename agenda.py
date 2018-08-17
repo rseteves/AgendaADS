@@ -14,4 +14,3 @@ elif opcao == 2:
 	funcoes.listar()
 else:
 	funcoes.falha()
-

@@ -31,3 +31,35 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
+
+    def DeletarContato():
+    import csv
+    lista = []
+    agenda = open('agendatelefonica.csv', 'r')
+    ler = csv.reader(agenda)
+    for lin in ler:
+        lista.append(lin)
+    nome = input('Nome do Contato para deletar').lower()
+    x=0
+    while x < len(lista):
+        contato = lista[x]
+        if nome in contato:
+            del(lista[x])
+            print('contato deletado')
+            break
+        x += 1
+    agenda.close()
+
+    agenda = open('agendatelefonica.csv', 'w')
+    agenda.truncate()
+    agenda.close()
+    agenda = open('agendatelefonica.csv', 'a')
+    for linha in lista:
+        for dado in linha:
+            agenda.write(dado)
+            if dado == '':
+                agenda.write("\n")
+            else:
+                agenda.write(',')
+
+

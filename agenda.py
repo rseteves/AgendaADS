@@ -15,5 +15,11 @@ elif opcao == 2:
 	funcoes.listar()
 elif opcao == 4:
 	funcoes.deletar()
+elif opcao == 5:
+        funcoes.encontrar(str(input("Digite o nome que deseja encontrar:")))
+else:
+	funcoes.falha()
+	
+=======
 else:
 	funcoes.falha()

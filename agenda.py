@@ -18,8 +18,4 @@ elif opcao == 4:
 elif opcao == 5:
         funcoes.encontrar(str(input("Digite o nome que deseja encontrar:")))
 else:
-	funcoes.falha()
-	
-=======
-else:
-	funcoes.falha()
+	funcoes.falha()====else:	

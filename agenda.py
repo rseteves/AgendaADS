@@ -17,5 +17,3 @@ elif opcao == 4:
 	funcoes.deletar()
 else:
 	funcoes.falha()
-
-

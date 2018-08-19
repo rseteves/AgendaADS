@@ -22,11 +22,20 @@ def adicionar():
 	agenda.write("\n")
 	agenda.close()
 	
+# Listar linhas da agenda
+def numlinhas():
+	arquivo = open("agendatelefonica.csv", "r")
+	n_linhas = sum(1 for linha in arquivo)
+	arquivo.close()
+	return n_linhas
+
+
 def listar():
+	qtdlinhas = numlinhas()
 	print("Lista de Contatos")
 	agenda = open("agendatelefonica.csv")
 	numero = 0
-	while numero > 25:
+	while numero < qtdlinhas:
 		print (agenda.readline())
 		numero = numero + 1
 	print("Listado correctamente")	

@@ -20,3 +20,6 @@ elif opcao == 5:
 else:
 	funcoes.falha()
 	
+=======
+else:
+	funcoes.falha()

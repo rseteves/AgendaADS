@@ -9,6 +9,7 @@ def bemvindo():
 	print("4  Apagar um contato")
 	print("5  Buscar um contato")
 
+  
 #Funcoes do processo
 def adicionar():
 	print("Adicionar um registro")
@@ -59,14 +60,6 @@ def deletar():
 def falha():
 	print("Opcao Incorreta")
 
-
-
-
-
-
-
-
-
 def encontrar(busca):
     agenda = open("agendatelefonica.csv")
     lista = (agenda.readlines())
@@ -77,10 +70,4 @@ def encontrar(busca):
             nome = True
     if nome == False:
             print("Nome não encontrado")
-    
-        
-
-
-
-
-	
+	print("Opcao Incorreta")

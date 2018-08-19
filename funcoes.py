@@ -9,8 +9,8 @@ def bemvindo():
 def adicionar():
 	print("Adicionar um registro")
 	agenda = open("agendatelefonica.csv",'a')
-	nome = raw_input("Nome do Contato:")
-	telefone = raw_input("Digite o telefone:")
+	nome = input("Nome do Contato:")
+	telefone = input("Digite o telefone:")
 	print("Contato salvo com nome:",nome," e numero",telefone)
 	agenda.write(nome)
 	agenda.write(",")
@@ -18,12 +18,21 @@ def adicionar():
 	agenda.write(",")
 	agenda.write("\n")
 	agenda.close()
-	
+
+# Listar linhas da agenda
+def numlinhas():
+	arquivo = open("agendatelefonica.csv", "r")
+	n_linhas = sum(1 for linha in arquivo)
+	arquivo.close()
+	return n_linhas
+
+
 def listar():
+	qtdlinhas = numlinhas()
 	print("Lista de Contatos")
 	agenda = open("agendatelefonica.csv")
 	numero = 0
-	while numero < 25:
+	while numero < qtdlinhas:
 		print (agenda.readline())
 		numero = numero + 1
 	print("Listado correctamente")	
@@ -31,3 +40,6 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
+
+
+

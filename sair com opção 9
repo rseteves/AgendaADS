@@ -1,0 +1,17 @@
+while opcao != 9:
+           
+                if opcao == 1:
+                       op = adicionar()       
+
+                elif opcao == 2:
+                        v=listar()
+                        
+
+                elif opcao == 4:
+                        buscar(input("Digite o nome"))
+                else:
+                        falha()
+                
+
+           
+(

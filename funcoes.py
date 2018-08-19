@@ -70,4 +70,3 @@ def encontrar(busca):
             nome = True
     if nome == False:
             print("Nome não encontrado")
-	print("Opcao Incorreta")

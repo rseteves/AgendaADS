@@ -13,5 +13,7 @@ if opcao == 1:
 	funcoes.adicionar()
 elif opcao == 2:
 	funcoes.listar()
+elif opcao == 4:
+	funcoes.deletar()
 else:
 	funcoes.falha()

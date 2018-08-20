@@ -15,9 +15,9 @@ elif opcao == 2:
 	funcoes.listar()
 elif opcao == 3:
 	funcoes.Buscar()
-elif opcao == 2:
+elif opcao == 4:
 	funcoes.DeletarContato()
-elif opcao == 2:
+elif opcao == 5:
 	funcoes.sairDoPrograma()
 else:
 	funcoes.falha()

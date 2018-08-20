@@ -7,8 +7,7 @@ funcoes.bemvindo()
 opcao = int(input())
 print("Selecione", opcao)
 
-
-#Estrutura de controle3
+#Estrutura de controle
 if opcao == 1:
 	funcoes.adicionar()
 elif opcao == 2:

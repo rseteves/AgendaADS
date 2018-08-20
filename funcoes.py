@@ -87,4 +87,3 @@ def falha():
 def sairDoPrograma():
 	print("\nA aplicação foi encerrada!")
 	sys.exit()
-	

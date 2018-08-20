@@ -48,7 +48,8 @@ def bemvindo():
 	print("1 -> Adicionar um novo contato")
 	print("2 -> Listar os contatos da agenda")
   	print("3 -> Buscar um contato")
-	print("4 -> Sair do programa")
+	print("4 -> Deletar um contato")
+	print("5 -> Sair do programa")
 	print("Selecione uma Opcao")
 
  #Funcoes do processo

@@ -1,10 +1,26 @@
 import sys
 import csv
-#Faz a busca baseado no nome escolhido
+
 def volta():
     print("\n")
     bemvindo()
     
+def Estrutura(opcao):
+    if opcao == 1:
+        adicionar()
+    elif opcao == 2:
+        listar()
+    elif opcao == 3:
+        Busca()
+    elif opcao == 4:
+        DeletarContato()
+    elif opcao == 5:
+        sairDoPrograma()
+    else:
+        falha()
+    
+    
+#Faz a busca baseado no nome escolhido    
 def Busca():
     nome_arquivo = csv.reader(open('agendatelefonica.csv', 'r'))
     #concluido de que as pessoas neste programa não terão nomes iguais
@@ -23,7 +39,8 @@ def DeletarContato():
     ler = csv.reader(agenda)
     for lin in ler:
         lista.append(lin)
-    nome = input('Nome do Contato para deletar').lower()
+    nome = input('Digite o nome do contato para deletar: ').lower()
+
     x=0
     while x < len(lista):
         contato = lista[x]
@@ -56,15 +73,17 @@ def bemvindo():
     print("4 -> Deletar um contato")
     print("5 -> Sair do programa")
     print("Selecione uma Opcao")
-    
+    opcao = int(input())
+    print("Selecionado", opcao)
+    Estrutura(opcao)
 
  #Funcoes do processo
 def adicionar():
     print("Adicionar um registro")
     agenda = open("agendatelefonica.csv",'a')
-    nome = input("Nome do Contato:")
-    telefone = input("Digite o telefone:")
-    print("Contato salvo com nome:",nome," e numero",telefone)
+    nome = input("Nome do Contato: ")
+    telefone = input("Digite o telefone: ")
+    print("Contato salvo com nome: ",nome," e numero ",telefone)
     agenda.write(nome)
     agenda.write(",")
     agenda.write(telefone)
@@ -87,3 +106,4 @@ def falha():
 def sairDoPrograma():
 	print("\nA aplicação foi encerrada!")
 	sys.exit()
+

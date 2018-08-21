@@ -1,5 +1,6 @@
 import sys
 import csv
+
 def volta():
     print("\n")
     bemvindo()
@@ -39,6 +40,7 @@ def DeletarContato():
     for lin in ler:
         lista.append(lin)
     nome = input('Digite o nome do contato para deletar: ').lower()
+
     x=0
     while x < len(lista):
         contato = lista[x]
@@ -75,14 +77,13 @@ def bemvindo():
     print("Selecionado", opcao)
     Estrutura(opcao)
 
-
  #Funcoes do processo
 def adicionar():
     print("Adicionar um registro")
     agenda = open("agendatelefonica.csv",'a')
     nome = input("Nome do Contato: ")
     telefone = input("Digite o telefone: ")
-    print("Contato salvo com nome:",nome," e numero",telefone)
+    print("Contato salvo com nome: ",nome," e numero ",telefone)
     agenda.write(nome)
     agenda.write(",")
     agenda.write(telefone)
@@ -105,3 +106,4 @@ def falha():
 def sairDoPrograma():
 	print("\nA aplicação foi encerrada!")
 	sys.exit()
+

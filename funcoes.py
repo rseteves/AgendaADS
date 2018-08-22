@@ -34,7 +34,7 @@ def Busca():
 #Realiza a exclusão de um contato
 def DeletarContato():
     agenda = [line for line in open("agendatelefonica.csv")]
-    nome = input("Digite o nome do contato a ser deletado")
+    nome = input("Digite o nome do contato a ser deletado: ").lower().capitalize()
 
     #delete da o contato da variavel agenda
     for item in agenda:
@@ -46,7 +46,8 @@ def DeletarContato():
     agenda_secundaria.writelines(agenda)
     agenda_secundaria.close()
 
-    volta()
+    listar()
+    
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
     print("Bem Vindo a Agenda")
@@ -65,7 +66,7 @@ def bemvindo():
 def adicionar():
     print("Adicionar um registro")
     agenda = open("agendatelefonica.csv",'a')
-    nome = input("Nome do Contato: ")
+    nome = input("Nome do Contato: ").lower().capitalize()
     telefone = input("Digite o telefone: ")
     print("Contato salvo com nome: ",nome," e numero ",telefone)
     agenda.write(nome)

@@ -33,7 +33,7 @@ def Busca():
 
 #Realiza a exclusão de um contato
 def DeletarContato():
-        agenda = [line for line in open("agendatelefonica.csv")]
+    agenda = [line for line in open("agendatelefonica.csv")]
     nome = input("Digite o nome do contato a ser deletado")
 
     #delete da o contato da variavel agenda

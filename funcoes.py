@@ -2,14 +2,30 @@
 import csv
 import sys
 def bemvindo():
-	print("\nBem Vindo a Agenda")
-	print("Selecione uma Opcao")
-	print("1 - Adicionar um novo contato")
-	print("2 - Listar os contatos da agenda")
-	print("3 - Deletar contato")
-	print("4 - Buscar contato")
-	print("5 - Sair do programa")  
-	print('----------------------------------')
+    print("\nBem Vindo a Agenda")
+    print("Selecione uma Opcao")
+    print("1 - Adicionar um novo contato")
+    print("2 - Listar os contatos da agenda")
+    print("3 - Deletar contato")
+    print("4 - Buscar contato")
+    print("5 - Sair do programa")
+    print('----------------------------------')
+    opcao = int(input())
+    print("Selecionaste", opcao)
+
+    #Estrutura de controle
+    if opcao==1:
+        adicionar()
+    elif opcao==2:
+        listar()
+    elif opcao==3:
+        deletanum()
+    elif opcao==4:
+        Busca()
+    elif opcao==5:
+        Sair()
+    else:
+        falha()
 
 #Funcoes do processo
 def adicionar():
@@ -48,9 +64,20 @@ def Busca():
     for x in nome_arquivo:
         if x[0] == nome:
             print("Contato buscado: " , x)        
-    bemvindo()    
+    bemvindo()
 
+def deletanum():
+    agenda = [linha for linha in open("agendatelefonica.csv")]
+    name = input("Insira o nome do contato que você deseja excluir:")
 
+    for pessoa in agenda:
+        if name in pessoa:
+            agenda.remove(pessoa)
+
+    agenda_apoio = open("agendatelefonica.csv","w")
+    agenda_apoio.writelines(agenda)
+    agenda_apoio.close()
+    bemvindo()
                                 
         
         

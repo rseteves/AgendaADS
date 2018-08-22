@@ -1,0 +1,175 @@
+<DOCTYPE! html>
+
+<html>
+<head>
+	<title>AC 2 - Exercicio 1 </title>
+	<style>
+		#menu ul {
+			padding:0px;
+			margin:0px;
+			background-color:#EDEDED;
+			list-style:none;
+			display: center;
+		}
+		
+		#menu ul li { 
+			display: inline; 
+		}
+	
+		#menu ul li a {
+			padding: 2px 10px;
+			display: inline-block;
+
+			/* visual do link */
+			background-color:#EDEDED;
+			color: #333;
+			text-decoration: none;
+			border-bottom:3px solid #EDEDED;
+			transition: background-color 1s , color 1s , border-bottom 1s; 
+			transition-timing-function: ease-out;
+		}
+		
+		#menu ul li a:hover {
+			background-color:#D6D6D6;
+			color: #6D6D6D;
+			border-bottom:3px solid #EA0000;
+		}
+		
+		input[type=text], select, textarea {
+			width: 100%; /* Full width */
+			padding: 12px; /* Some padding */  
+			border: 1px solid #ccc; /* Gray border */
+			border-radius: 4px; /* Rounded borders */
+			box-sizing: border-box; /* Make sure that padding and width stays in place */
+			margin-top: 6px; /* Add a top margin */
+			margin-bottom: 16px; /* Bottom margin */
+			resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+
+		.container {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+		
+		.btn_submit{
+			padding-right: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+<center><nav id="menu">
+    <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="exercicio1.html">Exercicio 1</a></li>
+        <li><a href="exercicio2.html">Exercicio 2</a></li>
+        <li><a href="exercicio3.html">Exercicio 3</a></li>
+        <li><a href="exercicio4.html">Exercicio 4</a></li>
+		<li><a href="exercicio5.html">Exercicio 5</a></li>
+    </ul>
+</nav></center>
+
+<div class="div">
+<form action="action_page.php">
+<fieldset>
+	<legend>Dados Pessoais</legend>
+	<table cellspacing="10">
+		<tr>
+			<td>
+				<label>Nome Editora: </label>
+			</td>
+			<td align="left">
+				<input type="text" name="email" placeholder="Exemplo Editora" autocomplete="off">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Endereço: </label>
+			</td>
+			<td align="left">
+				<input type="text" name="dia" placeholder="Exemplo Endereço" autocomplete="off"> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>CNPJ: </label>
+			</td>
+			<td align="left">
+				<input type="text" name="rg" maxlength="14" placeholder="Exemplo CNPJ" autocomplete="off"> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Web Site:</label>
+			</td>
+			<td align="left">
+				<input type="text" name="cpf" placeholder="Exemplo Web Site" autocomplete="off"> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>E-mail:</label>
+			</td>
+			<td align="left">
+				<input type="text" name="cpf" placeholder="Exemplo E-mail" autocomplete="off"> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Telefone:</label>
+			</td>
+			<td align="left">
+				<input type="text" name="cpf" placeholder="Exemplo Telefone" autocomplete="off"> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Nome Contato:</label>
+			</td>
+			<td align="left">
+				<input type="text" name="cpf" placeholder="Exemplo Nome Contato" autocomplete="off"> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Gênero:</label>
+			</td>
+			<td align="left">
+				<input type="checkbox" name="checkbox" /> Policial
+				<input type="checkbox" name="checkbox" /> Ficção
+				<input type="checkbox" name="checkbox" /> Não Ficção
+				<input type="checkbox" name="checkbox" /> Religioso
+				<input type="checkbox" name="checkbox" /> Esporte
+				<input type="checkbox" name="checkbox" /> Profissional
+				<input type="checkbox" name="checkbox" /> Outros
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input class="btn_submit" type="submit" value="Cadastrar">
+			</td>
+		</tr>
+	</table>
+</fieldset>
+</form>
+</div>
+
+</form>
+</center>
+</body>
+<html>

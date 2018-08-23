@@ -39,4 +39,18 @@ def buscar():
 		     if rows[0] == nome
 		     print("Contato buscado: ", rows)
     volta()
-		 
+
+	
+def apagar():
+    agenda = [line for line in open("agendatelefonica.csv")]
+    nomeApagar = input("Digite o nome do contato a ser deletado: ").lower().capitalize()
+    for y in agenda:
+        if nomeApagar in y:
+            agenda.remove(y)
+
+    
+    OutraAgenda= open("agendatelefonica.csv", 'w')
+    OutraAgenda.writelines(agenda)
+    OutraAgenda.close()
+
+    listar()

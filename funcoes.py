@@ -31,7 +31,15 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
-	
+
+def buscar():
+	arquivo = csv.reader(open('agenndatelefonica.csv', 'r'))
+	nome = input('Digite o nome procurado: ")
+	for rows in arquivo:
+		     if rows[0] == nome
+		     print("Contato buscado: ", rows)
+    volta()
+
 	
 def apagar():
     agenda = [line for line in open("agendatelefonica.csv")]

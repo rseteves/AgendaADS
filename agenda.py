@@ -1,19 +1,24 @@
 #Agenda Telefonica
 import funcoes
 
-funcoes.bemvindo()
 
-#Opcoes do Usuario
-opcao = int(raw_input())
-print("Seleccionaste", opcao)
 
+repeticao = True
 
 #Estrutura de controle
-if opcao == 1:
-	funcoes.adicionar()
-elif opcao == 2:
-	funcoes.listar()
-else:
-	funcoes.falha()
+#Opcoes do Usuario
+while repeticao == True:
+	funcoes.bemvindo()
+	if opcao == 1:
+		funcoes.adicionar()
+	elif opcao == 2:
+		funcoes.listar()
+	elif opcao == 3:
+		funcoes.buscar()
+	elif opcao == 4:
+		repeticao = False
+	else:
+		funcoes.falha()
+input("Pressione ENTER para Sair")
 
 

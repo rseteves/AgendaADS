@@ -1,9 +1,11 @@
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
-	print("Bem Vindo a Agenda")
-	print("Selecione uma Opcao")
-	print("1  Adicionar um novo contato")
-	print("2  Listar os contatos da agenda")
+	print("""Selecione a Opção: 
+			1 - Adicionar 	
+			2 - Listar 
+			3 - Buscar 
+			4 - Sair""")
+	opcao = int(input("Opção: "))
 
 #Funcoes do processo
 def adicionar():

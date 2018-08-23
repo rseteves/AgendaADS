@@ -1,19 +1,14 @@
 #Agenda Telefonica
 import funcoes
 
-funcoes.bemvindo()
+
 
 repeticao = True
 
 #Estrutura de controle
 #Opcoes do Usuario
 while repeticao == True:
-	print("""Selecione a Opção: 
-			1 - Adicionar 	
-			2 - Listar 
-			3 - Buscar 
-			4 - Sair""")
-	opcao = int(input("Opção: "))
+	funcoes.bemvindo()
 	if opcao == 1:
 		funcoes.adicionar()
 	elif opcao == 2:

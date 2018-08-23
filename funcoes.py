@@ -7,6 +7,7 @@ def bemvindo():
     print("2  Listar os contatos da agenda")
     print("3  Buscar seu contato salvo")
     print("4  Deletar sua agenda")
+    print ("Para sair do pragramar digite sair")
     x = int(input("Escolha sua opção ! "))    
     if x == 1:
         print ("SELECIONADA = Adicionar novo contato selecionado")
@@ -60,8 +61,9 @@ def busca():
         if nome == rows:
             print("Nome", nome, telefone)
 
-
-        
+def sair ():
+	if entrada == "sair":
+		break
     
     
 

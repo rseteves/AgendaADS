@@ -40,6 +40,11 @@ def listar():
 def falha():
 	print("Opcao Incorreta")
 
+
+def sairDoPrograma():
+	print("\nA aplicação foi encerrada!")
+	sys.exit()
+
 def buscar():
 	arquivo = csv.reader(open('agenndatelefonica.csv', 'r'))
 	nome = input('Digite o nome procurado: ")
@@ -62,3 +67,4 @@ def apagar():
     OutraAgenda.close()
 
     listar()
+

@@ -36,6 +36,24 @@ def listar():
 def falha():
 	print("Opcao Incorreta")
 
+def buscar():
+	array_contatos = []
+	contato_escolhido = []
+	valor_busca = input("Digite o nome ou o telefone para buscar:")
+	csv = open("agendatelefonica.csv","r")
+	arquivo = csv.readlines()
+	for contatos in arquivo :
+		array_contatos = contatos.split(",")
+		if(array_contatos[0] == valor_busca) :
+	   		contato_escolhido.append(contatos)
+		elif(array_contatos[1] == valor_busca) :
+			contato_escolhido.append(contatos)
+	print("Resultados da busca:",len(contato_escolhido))
+	if(len(contato_escolhido) >= 1) :
+		for resultados in contato_escolhido :
+			resultados = resultados.split(",")
+			print("Nome:",resultados[0]," - Contato:",resultados[1])
+
 def deletar(var_nomedeletar)
     print(("""Tem certeza que quer deletar essa entrada? 
     

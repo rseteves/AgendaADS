@@ -4,7 +4,7 @@ import funcoes
 funcoes.bemvindo()
 
 #Opcoes do Usuario
-opcao = raw_int(input())
+opcao = int(raw_input())
 print("Seleccionaste", opcao)
 
 

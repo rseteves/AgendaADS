@@ -1,3 +1,4 @@
+import csv
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 
 def bemvindo():
@@ -7,7 +8,6 @@ def bemvindo():
     print("2  Listar os contatos da agenda")
     print("3  Buscar seu contato salvo")
     print("4  Deletar sua agenda")
-    print ("Para sair do pragramar digite sair")
     x = int(input("Escolha sua opção ! "))    
     if x == 1:
         print ("SELECIONADA = Adicionar novo contato selecionado")
@@ -37,15 +37,11 @@ def adicionar():
 	agenda.close()
 
 	
-def listar():
-    print("Lista de Contatos")
-    agenda = open("agendatelefonica.csv")
-    numero = 0
-    while numero < 25:
-        print (agenda.readline())
-        numero = numero + 1
-    print("Listado correctamente")	
-    agenda.close()
+def lista():
+    print("\nAgenda\n\n------")
+    agenda = open("agendatelefonica.csv",'r')
+    for i in agenda:
+        print(i)
 
 
 
@@ -55,12 +51,11 @@ def falha():
 
 
 def busca():
-    agenda = open("agendatelefonica.csv")
-    nome = input ("Qual o nome de seu contato ? ")
+    agenda = csv.reader(open("agendatelefonica.csv",'r'))
+    nome = input("Digite o contato para procurar: ")
     for rows in agenda:
-        if nome == rows:
-            print("Nome", nome, telefone)
-
+        if rows[0] == nome:
+            print(rows)
 def sair ():
 	if entrada == "sair":
 		break

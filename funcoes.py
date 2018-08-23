@@ -69,6 +69,7 @@ def Busca():
 def deletanum():
     agenda = [linha for linha in open("agendatelefonica.csv")]
     name = input("Insira o nome do contato que você deseja excluir:")
+
     for pessoa in agenda:
         if name in pessoa:
             agenda.remove(pessoa)
@@ -86,6 +87,7 @@ def Sair():
     print("sair do programa")
     sys.exit()
     
+
         
         
               

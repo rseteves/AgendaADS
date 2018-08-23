@@ -39,4 +39,4 @@ def buscar():
 		     if rows[0] == nome
 		     print("Contato buscado: ", rows)
     volta()
-		  
+		 

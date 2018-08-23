@@ -1,14 +1,15 @@
-def escolha():
-   if opcao==5:
-      break
-      elif opcao==1:
-           adicionar()
-          elif opcao==2:
-               listar()
-              elif opcao==3:
-                   buscar()
-              elif opcao==4:
-                   deletar()
-return escolha 
-    
-        
+import funcoes
+import sys
+menu()
+x = opcao()
+#Estrutura de controle
+if x==1:
+    adicionar()
+elif x==2:
+    listar()
+elif x==3:
+    buscar()
+elif x==4:
+    deletar()
+elif x==5:
+    sys.exit()

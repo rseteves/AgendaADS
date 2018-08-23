@@ -38,7 +38,7 @@ def buscar():
 	for rows in arquivo:
 		     if rows[0] == nome
 		     print("Contato buscado: ", rows)
-    volta()
+    back()
 
 	
 def apagar():

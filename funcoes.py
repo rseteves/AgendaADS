@@ -1,9 +1,11 @@
-#Mensagem de Bem Vindo e Opcoes ao Usuario
+﻿#Mensagem de Bem Vindo e Opcoes ao Usuario
 def bemvindo():
-	print("Bem Vindo a Agenda")
-	print("Selecione uma Opcao")
-	print("1  Adicionar um novo contato")
-	print("2  Listar os contatos da agenda")
+	print("""Selecione a Opção: 
+			1 - Adicionar 	
+			2 - Listar 
+			3 - Buscar 
+			4 - Sair""")
+	opcao = int(input("Opção: "))
 
 #Funcoes do processo
 def adicionar():
@@ -20,13 +22,15 @@ def adicionar():
 	agenda.close()
 	
 def listar():
-	print("Lista de Contatos")
+    	
+	print("Lista de Contatos \n")
 	agenda = open("agendatelefonica.csv")
-	numero = 0
-	while numero < 25:
-		print (agenda.readline())
-		numero = numero + 1
-	print("Listado correctamente")	
+	
+	for linha in agenda:
+    		print(linha.split(',')[0]+ ' - ' + linha.split(',')[1])
+
+	print("\nListado correctamente!")	
+
 	agenda.close()
 
 def falha():
@@ -49,3 +53,23 @@ def buscar():
 		for resultados in contato_escolhido :
 			resultados = resultados.split(",")
 			print("Nome:",resultados[0]," - Contato:",resultados[1])
+
+def deletar(var_nomedeletar)
+    print(("""Tem certeza que quer deletar essa entrada? 
+    
+    1 - Sim
+    2 - Não
+    """))
+    vopcao = (int(input("Opção: "))
+    if vopcao == 1:
+        text_file = open("agendatelefonica.csv", "r") ##Abre o Arquivo
+        nomes = text_file.readlines() ##Le todas as linhas 
+        text_file.close() ##Fecha o arquivo
+        text_file = open("agendatelefonica.csv", "w") ##Abre o Arquivo para escrita
+        for linha in nomes:  ##Percorre o Arquivo
+            if linha != var_nomedeletar + '\n':  ##Pergunta se a linha é a que queremos deletar
+                text_file.write(linha)  ##Se não for, reescreve a linha no arquivo
+        text_file.close()  ##Fecha o Arquivo
+        print("Registro deletado com sucesso")  ##Feedback
+    else:
+        print("Registro preservado")

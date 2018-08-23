@@ -43,15 +43,13 @@ def adicionar():
 	bemvindo()
 	
 def listar():
-	print("Lista de Contatos")
-	agenda = open("agendatelefonica.csv")
-	numero = 0
-	while numero < 25:
-		print (agenda.readline())
-		numero = numero + 1
-	print("Listado corretamente")	
-	agenda.close()
-	bemvindo()
+
+    print("Lista de Contatos")
+    agenda = open("agendatelefonica.csv")
+    for rows in agenda:
+        print(rows)
+    agenda.close()
+    bemvindo()
 
 def falha():
 	print("Opcao Incorreta")
@@ -76,7 +74,6 @@ def deletanum():
             print("Contato apagado com suecesso")
         else:
              print("Erro")
-    
 
     agenda_apoio = open("agendatelefonica.csv","w")
     agenda_apoio.writelines(agenda)
@@ -87,8 +84,6 @@ def Sair():
     print("sair do programa")
     sys.exit()
     
-
-        
         
               
                 

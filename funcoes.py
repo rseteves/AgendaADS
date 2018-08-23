@@ -31,3 +31,7 @@ def listar():
 
 def falha():
 	print("Opcao Incorreta")
+
+def sairDoPrograma():
+	print("\nA aplicação foi encerrada!")
+	sys.exit()

@@ -73,12 +73,21 @@ def deletanum():
     for pessoa in agenda:
         if name in pessoa:
             agenda.remove(pessoa)
+            print("Contato apagado com suecesso")
+        else:
+             print("Erro")
+    
 
     agenda_apoio = open("agendatelefonica.csv","w")
     agenda_apoio.writelines(agenda)
     agenda_apoio.close()
     bemvindo()
-                                
+
+def Sair():
+    print("sair do programa")
+    sys.exit()
+    
+
         
         
               

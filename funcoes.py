@@ -1,4 +1,9 @@
 #Mensagem de Bem Vindo e Opcoes ao Usuario
+def back():
+    print("\n")
+    bemvindo()
+	
+	
 def bemvindo():
 	print("Bem Vindo a Agenda")
 	print("Selecione uma Opcao")
@@ -18,6 +23,8 @@ def adicionar():
 	agenda.write(",")
 	agenda.write("\n")
 	agenda.close()
+	back()
+	
 	
 def listar():
 	print("Lista de Contatos")
@@ -28,6 +35,22 @@ def listar():
 		numero = numero + 1
 	print("Listado correctamente")	
 	agenda.close()
+	back()
 
 def falha():
 	print("Opcao Incorreta")
+	
+	
+def apagar():
+    agenda = [line for line in open("agendatelefonica.csv")]
+    nomeApagar = input("Digite o nome do contato a ser deletado: ").lower().capitalize()
+    for y in agenda:
+        if nomeApagar in y:
+            agenda.remove(y)
+
+    
+    OutraAgenda= open("agendatelefonica.csv", 'w')
+    OutraAgenda.writelines(agenda)
+    OutraAgenda.close()
+
+    listar()

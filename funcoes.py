@@ -9,7 +9,7 @@ def bemvindo():
 def adicionar():
 	print("Adicionar um registro")
 	agenda = open("agendatelefonica.csv",'a')
-	nome = input("Nome do Contato:")
+	nome = raw_input("Nome do Contato:")
 	telefone = input("Digite o telefone:")
 	print("Contato salvo com nome:",nome," e numero",telefone)
 	agenda.write(nome)

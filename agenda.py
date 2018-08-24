@@ -9,6 +9,7 @@ repeticao = True
 #Opcoes do Usuario
 while repeticao == True:
 	funcoes.bemvindo()
+	opcao = int(input("Opção: "))
 	if opcao == 1:
 		funcoes.adicionar()
 	elif opcao == 2:

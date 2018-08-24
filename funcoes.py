@@ -1,4 +1,5 @@
 import csv
+import sys
 #Mensagem de Bem Vindo e Opcoes ao Usuario
 
 def bemvindo():
@@ -25,7 +26,11 @@ def bemvindo():
     elif x == 5:
         print ("SELECIONADA = Parar agenda! ")
         sair ()
-        
+
+
+def voltar():
+    print()
+    bemvindo()
 
 #Funcoes do processo
 def adicionar():
@@ -40,42 +45,26 @@ def adicionar():
 	agenda.write(",")
 	agenda.write("\n")
 	agenda.close()
+	voltar()
 
-	
+# DEFINE FUNÇÃO DE LISTAR	
 def lista():
     print("\nAgenda\n\n------")
     agenda = open("agendatelefonica.csv",'r')
     for i in agenda:
         print(i)
+    voltar()
 
 
 
 
-def falha():
-	print("Opcao Incorreta")
 
-
-def busca():
-    agenda = csv.reader(open("agendatelefonica.csv",'r'))
-    nome = input("Digite o contato para procurar: ")
-    for rows in agenda:
-        if rows[0] == nome:
-            print(rows)
-
-
-def deletar():
-    agenda = csv.reader(open("agendatelefonica.csv",'a'))
-    nome = input("Digite o contato para procurar: ")
-    nome = busca
-    if busca != nome:
-        print ("Esse nome não existe")
-    else:
-        del agenda[busca]
     
+#DEFINE FALHA
+def falha():
+    print("Opcao Incorreta")
+    voltar()
 
-def sair ():
-	if entrada == "sair":
-		break
     
     
 

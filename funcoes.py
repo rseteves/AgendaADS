@@ -76,16 +76,16 @@ def deletar():
     lista()
     voltar()
 
-
-
-
-
-    
 #DEFINE FALHA
 def falha():
     print("Opcao Incorreta")
     voltar()
 
+	
+	# DEFINE SAIR
+def sair():
+	print("Seu programa foi fechado ")
+	sys.exit()
     
     
 

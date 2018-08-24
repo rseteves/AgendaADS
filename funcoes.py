@@ -7,19 +7,24 @@ def bemvindo():
     print("1  Adicionar um novo contato")
     print("2  Listar os contatos da agenda")
     print("3  Buscar seu contato salvo")
-    print("4  Deletar sua agenda")
+    print("4  Deletar um contato salvo")
+    print("5  Sair da agenda")
     x = int(input("Escolha sua opção ! "))    
     if x == 1:
         print ("SELECIONADA = Adicionar novo contato selecionado")
         adicionar()
     elif x == 2:
         print (" SELECIONADA = Listar os contatos da agenda")
-        listar()
+        lista()
     elif x == 3:
         print ("SELECIONADA = Buscar seu contato salvo")
         busca()
-    else:
-        print ("SELECIONADA = Deletar sua agenda! ")
+    elif x == 4:
+        print ("SELECIONADA = Deletar nome na sua lista")
+        deletar()
+    elif x == 5:
+        print ("SELECIONADA = Parar agenda! ")
+        sair ()
         
 
 #Funcoes do processo
@@ -37,19 +42,11 @@ def adicionar():
 	agenda.close()
 
 	
-
-	def lista():
-	count = 0
-	os.system('cls')
-	print("Lista de Contatos:")
-	agenda = open("agendatelefonica.csv", "r")
-	for i, line in enumerate(agenda):
-		line = line.rstrip()
-		print (str(i)+".",line)
-		count += 1
-	agenda.close()
-	print("\n"+str(count)+" contatos encontrados.")	
-	voltar()
+def lista():
+    print("\nAgenda\n\n------")
+    agenda = open("agendatelefonica.csv",'r')
+    for i in agenda:
+        print(i)
 
 
 
@@ -63,15 +60,19 @@ def busca():
     nome = input("Digite o contato para procurar: ")
     for rows in agenda:
         if rows[0] == nome:
-		
-		
-		
-		
-		
-		
-		
-	
             print(rows)
+
+
+def deletar():
+    agenda = csv.reader(open("agendatelefonica.csv",'a'))
+    nome = input("Digite o contato para procurar: ")
+    nome = busca
+    if busca != nome:
+        print ("Esse nome não existe")
+    else:
+        del agenda[busca]
+    
+
 def sair ():
 	if entrada == "sair":
 		break

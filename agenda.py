@@ -1,19 +1,15 @@
-#Agenda Telefonica
 import funcoes
-
-funcoes.bemvindo()
-
-#Opcoes do Usuario
-opcao = int(raw_input())
-print("Seleccionaste", opcao)
-
-
+import sys
+menu()
+x = opcao()
 #Estrutura de controle
-if opcao == 1:
-	funcoes.adicionar()
-elif opcao == 2:
-	funcoes.listar()
-else:
-	funcoes.falha()
-
-
+if x==1:
+    adicionar()
+elif x==2:
+    listar()
+elif x==3:
+    buscar()
+elif x==4:
+    deletar()
+elif x==5:
+    sys.exit()

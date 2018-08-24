@@ -69,11 +69,9 @@ def listar():#lista um contato
 
 	print("Lista de Contatos")
 	agenda = open("agendatelefonica.csv")
-	numero = 0
-	while numero < 25:
-		print (agenda.readline())
-		numero = numero + 1
-	print("Listado correctamente")	
+	for linhas in agenda:
+                if linhas[0] == nome:
+                        print("Contato: ",linhas)
 	agenda.close()
 
 def falha(): #mensagem de falha

@@ -66,6 +66,18 @@ def busca():
 
 
 
+# DEFINE FUNÇÃO DELETAR
+def deletar():
+    agenda = [line for line in open("agendatelefonica.csv")]
+    nome = input("Digite o nome do contato a ser deletado: ").lower().capitalize()
+    for item in agenda:
+        if nome in item:
+            agenda.delete(item)
+    lista()
+    voltar()
+
+
+
 
 
     

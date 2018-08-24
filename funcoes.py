@@ -37,11 +37,19 @@ def adicionar():
 	agenda.close()
 
 	
-def lista():
-    print("\nAgenda\n\n------")
-    agenda = open("agendatelefonica.csv",'r')
-    for i in agenda:
-        print(i)
+
+	def lista():
+	count = 0
+	os.system('cls')
+	print("Lista de Contatos:")
+	agenda = open("agendatelefonica.csv", "r")
+	for i, line in enumerate(agenda):
+		line = line.rstrip()
+		print (str(i)+".",line)
+		count += 1
+	agenda.close()
+	print("\n"+str(count)+" contatos encontrados.")	
+	voltar()
 
 
 
@@ -55,6 +63,14 @@ def busca():
     nome = input("Digite o contato para procurar: ")
     for rows in agenda:
         if rows[0] == nome:
+		
+		
+		
+		
+		
+		
+		
+		
             print(rows)
 def sair ():
 	if entrada == "sair":

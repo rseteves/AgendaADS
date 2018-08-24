@@ -43,19 +43,28 @@ def busca():# busca um contato na lista
                 if linhas[0] == nome:
                         print("Contato: ",linhas)
 
-def adicionar():#adiciona um contato na lista
-	print("Adicionar um registro")
-	agenda = open("agendatelefonica.csv",'a')
-	nome = input("Nome do Contato:")
-	telefone = input("Digite o telefone:")
-	print("Contato salvo com nome:",nome," e numero",telefone)
-	agenda.write(nome)
-	agenda.write(",")
-	agenda.write(telefone)
-	agenda.write("\n")
-	agenda.close()
-	
-
+def adicionar():
+    print("Adicionar um registro")
+    agenda = open("agendatelefonica.csv",'a')
+    nome = input("Nome do Contato: ")
+    telefone = input("Digite o telefone: ")
+    print("Contato salvo com nome: ",nome," e numero ",telefone)
+    agenda.write(nome)
+    agenda.write(",")
+    agenda.write(telefone)
+    agenda.write("\n")
+    agenda.close()
+    print("\nQuer add mais um ?")
+    print("1-Sim ou 2-Não")
+    s = int(input("digite sua opção:"))
+    while s == 1:
+        adicionar()
+        print("Quer add mais um ?")
+        print("1-Sim ou 2-Não")
+        s = int(input("digite sua opção:"))
+    if s == 2:
+        volta()
+		
 def listar():#lista um contato 
 
 	print("Lista de Contatos")

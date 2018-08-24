@@ -55,6 +55,15 @@ def lista():
         print(i)
     voltar()
 
+#DEFINE FUNÇÃO BUSCAR
+def busca():
+    agenda = csv.reader(open("agendatelefonica.csv",'r'))
+    nome = input("Digite o contato para procurar: ")
+    for rows in agenda:
+        if rows[0] == nome:
+            print(rows)
+    voltar()
+
 
 
 

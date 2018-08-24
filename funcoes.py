@@ -70,7 +70,7 @@ def busca():
 		
 		
 		
-		
+	
             print(rows)
 def sair ():
 	if entrada == "sair":

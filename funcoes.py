@@ -82,7 +82,7 @@ def falha():
     voltar()
 
 	
-	# DEFINE SAIR
+# DEFINE SAIR
 def sair():
 	print("Seu programa foi fechado ")
 	sys.exit()

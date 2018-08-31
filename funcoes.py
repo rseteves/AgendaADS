@@ -7,13 +7,17 @@ def volta():
     
 def Estrutura(opcao):
     if opcao == 1:
-        adicionar()
+        nome = input("Nome do Contato: ").lower().capitalize()
+        telefone = input("Digite o telefone: ")
+        adicionar(nome, telefone)
     elif opcao == 2:
         listar()
     elif opcao == 3:
-        Busca()
+        nome = input("Digite o nome procurado: ")
+        Busca(nome)
     elif opcao == 4:
-        DeletarContato()
+        nome = input("Digite o nome do contato a ser deletado: ").lower().capitalize()
+        DeletarContato(nome)
     elif opcao == 5:
         sairDoPrograma()
     else:
@@ -21,10 +25,9 @@ def Estrutura(opcao):
     
     
 #Faz a busca baseado no nome escolhido    
-def Busca():
+def Busca(nome):
     nome_arquivo = csv.reader(open('agendatelefonica.csv', 'r'))
     #concluido de que as pessoas neste programa não terão nomes iguais
-    nome = input("Digite o nome procurado: ")
     #imprimir resultado
     for rows in nome_arquivo:
         if rows[0] == nome:
@@ -32,10 +35,8 @@ def Busca():
     volta()
 
 #Realiza a exclusão de um contato
-def DeletarContato():
+def DeletarContato(nome):
     agenda = [line for line in open("agendatelefonica.csv")]
-    nome = input("Digite o nome do contato a ser deletado: ").lower().capitalize()
-
     #delete da o contato da variavel agenda
     for item in agenda:
         if nome in item:
@@ -63,11 +64,9 @@ def bemvindo():
     Estrutura(opcao)
 
  #Funcoes do processo
-def adicionar():
+def adicionar(nome, telefone):
     print("Adicionar um registro")
     agenda = open("agendatelefonica.csv",'a')
-    nome = input("Nome do Contato: ").lower().capitalize()
-    telefone = input("Digite o telefone: ")
     print("Contato salvo com nome: ",nome," e numero ",telefone)
     agenda.write(nome)
     agenda.write(",")

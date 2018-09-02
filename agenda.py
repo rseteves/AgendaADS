@@ -1,5 +1,5 @@
 #Agenda Telefonica
-import funcoes
+from funcoes.py import *
 
 funcoes.bemvindo()
 

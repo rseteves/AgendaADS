@@ -1,10 +1,10 @@
 #Agenda Telefonica
-import funcoes
+from funcoes.py import *
 
 funcoes.bemvindo()
 
 #Opcoes do Usuario
-opcao = int(raw_input())
+opcao = int(input())
 print("Seleccionaste", opcao)
 
 

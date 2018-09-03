@@ -1,6 +1,5 @@
 import csv
 
-
 def bemvindo():
 	print("Bem Vindo a Agenda")
 	print("\n")
@@ -29,7 +28,6 @@ def adicionar():
 	agenda.write("\n")
 	agenda.close()
 	print("\n")
-	
 
 def listarR():
 	print("Lista de Contatos:")

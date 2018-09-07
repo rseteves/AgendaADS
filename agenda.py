@@ -17,9 +17,9 @@ while repeticao == True:
 	elif opcao == 3:
 		funcoes.buscar()
 	elif opcao == 4:
+		funcoes.deletar()
+	elif opcao == 5:
 		repeticao = False
 	else:
 		funcoes.falha()
 input("Pressione ENTER para Sair")
-
-

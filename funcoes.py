@@ -20,14 +20,19 @@ def adicionar():
 	agenda.close()
 	
 def listar():
-	print("Lista de Contatos")
-	agenda = open("agendatelefonica.csv")
-	numero = 0
-	while numero < 25:
-		print (agenda.readline())
-		numero = numero + 1
-	print("Listado correctamente")	
-	agenda.close()
+	
+print("Lista de Contatos")
+agenda = open("agendatelefonica.csv")
+numero = 0
+lista = []
+while numero < 25:
+        lista.append(agenda.readline())
+        print (agenda.readline())
+        numero = numero + 1
+print("Listado correctamente")	
+agenda.close()
+print(lista)
+
 
 def falha():
 	print("Opcao Incorreta")
